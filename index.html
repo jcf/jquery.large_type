@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery LargeType</title>
+
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+        <script src="jquery-1.4.js" type="text/javascript" charset="utf-8"></script>
+        <script src="jquery.large_type.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" language="javascript" charset="utf-8">
+          $(function() {
+            function large_type(e) {
+              e.preventDefault();
+              $.large_type("+123 123 123");
+              return false;
+            }
+
+            $('.click_me').click(large_type);
+          });
+        </script>
+        <link rel="stylesheet" href="large_type.css" type="text/css" media="screen" charset="utf-8"/>
+        <style type="text/css" media="screen">
+            body {
+                margin: 0;
+                padding: 0;
+                font-size: 12px;
+            }
+            #content {
+                margin: 100px auto;
+                width: 500px;
+            }
+            #content p {
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+            #content a {
+                color: #ff0080;
+                text-decoration: none;
+            }
+            #content a:hover {
+                color: #000
+            }
+            #content a.click_me {
+                font: bold 48px/52px 'helvetica neue' sans-serif;
+                letter-spacing: -0.05em;
+            }
+            #content p.author {
+                margin-top: 20px;
+                font: 11px/12px 'Lucida Grande', sans-serif;
+                color: #999;
+            }
+            #content p.author a {
+                color: #666;
+            }
+            #content p.author a:hover {
+                color: #000;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <p>
+                <a href="#" class="click_me">Click me!</a>
+            </p>
+            <p class="author">
+                a bit of <a href="http://github.com/jcf">James Conroy-Finn</a> for all to enjoy
+            </p>
+        </div>
+    </body>
+</html>
